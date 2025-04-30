@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="xamarinThreeButtons.MainPage">
+    <ContentPage.Content>
+        <StackLayout Padding="50,250,50,50">
+            <Button x:Name="Button1" BorderWidth="2" BorderColor="Red" Text="Красный" FontAttributes="Bold" Clicked="Button1_Click" CornerRadius="30"></Button>
+            <Button x:Name="Button2" BorderWidth="2" BorderColor="Blue" Text="Синий" FontAttributes="Bold" Clicked="Button2_Click" CornerRadius="30"></Button>
+            <Button x:Name="Button3" BorderWidth="2" BorderColor="Green" Text="Зеленый" FontAttributes="Bold" Clicked="Button3_Click" CornerRadius="30"></Button>
+            <Button x:Name="ButtonVibro" BorderWidth="2" BorderColor="Black" Text="Вибрация" FontAttributes="Bold" Clicked="Button4_Click" CornerRadius="30"></Button>
+            <Button x:Name="ButtonLight" BorderWidth="2" BorderColor="Black" Text="Вспышка" FontAttributes="Bold" Clicked="Button5_Click" CornerRadius="30"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
