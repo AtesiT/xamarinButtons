@@ -9,6 +9,7 @@
             <Button x:Name="Button3" BorderWidth="2" BorderColor="Green" Text="Зеленый" FontAttributes="Bold" Clicked="Button3_Click" CornerRadius="30"></Button>
             <Button x:Name="ButtonVibro" BorderWidth="2" BorderColor="Black" Text="Вибрация" FontAttributes="Bold" Clicked="Button4_Click" CornerRadius="30"></Button>
             <Button x:Name="ButtonLight" BorderWidth="2" BorderColor="Black" Text="Вспышка" FontAttributes="Bold" Clicked="Button5_Click" CornerRadius="30"></Button>
+            <Button x:Name="ButtonLocation" BorderWidth="2" BorderColor="Black" Text="Геолокация" FontAttributes="Bold" Clicked="ButtonLocation_Click" CornerRadius="30"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
