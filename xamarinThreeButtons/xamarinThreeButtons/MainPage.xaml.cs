@@ -114,24 +114,16 @@ namespace xamarinThreeButtons
 
         private void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
-            var reading = e.Reading.Acceleration;
-
-            // Устанавливаем цвет фона в зависимости от значений акселерометра
-            if (Math.Abs(reading.X) > Math.Abs(reading.Y) && Math.Abs(reading.X) > Math.Abs(reading.Z))
-            {
-                // Если X больше, меняем на красный
-                BackgroundColor = Color.Red;
-            }
-            else if (Math.Abs(reading.Y) > Math.Abs(reading.X) && Math.Abs(reading.Y) > Math.Abs(reading.Z))
-            {
-                // Если Y больше, меняем на зеленый
-                BackgroundColor = Color.Green;
-            }
-            else if (Math.Abs(reading.Z) > Math.Abs(reading.X) && Math.Abs(reading.Z) > Math.Abs(reading.Y))
-            {
-                // Если Z больше, меняем на синий
-                BackgroundColor = Color.Blue;
-            }
+            var data = e.Reading;
+            // Вывод значений в консоль для отладки
+            Console.WriteLine($"Reading: X: {data.Acceleration.X}, Y: {data.Acceleration.Y}, Z: {data.Acceleration.Z}");
+            // Используем значения ускорения напрямую как компоненты RGB
+            // Преобразуем значения из диапазона [-1, 1] в [0, 1] для корректного отображения цвета
+            double r = (data.Acceleration.X + 1) / 2;
+            double g = (data.Acceleration.Y + 1) / 2;
+            double b = (data.Acceleration.Z + 1) / 2;
+            // Устанавливаем цвет фона на основе значений акселерометра
+            BackgroundColor = Color.FromRgb(r, g, b);
         }
     }
 }
