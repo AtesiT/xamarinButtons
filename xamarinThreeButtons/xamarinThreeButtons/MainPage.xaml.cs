@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -33,10 +34,11 @@ namespace xamarinThreeButtons
             Vibration.Vibrate(TimeSpan.FromMilliseconds(5000));
         }
 
-        private void Button5_Click(object sender, EventArgs e)
+        private async void Button5_Click(object sender, EventArgs e) 
         {
-            Flashlight.TurnOnAsync();
-            Flashlight.TurnOffAsync();
+            await Flashlight.TurnOnAsync();
+            await Task.Delay(2000); // Задержка в 2 секунды
+            await Flashlight.TurnOffAsync();
         }
 
         private async void ButtonLocation_Click(object sender, EventArgs e)
